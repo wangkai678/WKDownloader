@@ -1,0 +1,6 @@
+framework module Pods_WKDownloader_Example {
+  umbrella header "Pods-WKDownloader_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

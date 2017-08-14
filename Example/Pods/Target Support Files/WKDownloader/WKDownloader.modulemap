@@ -1,0 +1,6 @@
+framework module WKDownloader {
+  umbrella header "WKDownloader-umbrella.h"
+
+  export *
+  module * { export * }
+}
