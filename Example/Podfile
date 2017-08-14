@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'WKDownloader_Example' do
+  pod 'WKDownloader', :path => '../'
+
+  target 'WKDownloader_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
