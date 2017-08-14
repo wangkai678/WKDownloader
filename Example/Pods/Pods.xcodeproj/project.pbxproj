@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		0F4DE7BCB829FBCFD52678902572FBF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		1F30D7869790E9DB4C3FA53C572BA7C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		28E591242C1C2DCBA2519381C35304C6 /* WKDownloader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD89FD5418AE698FFF6E3D125BCE35BF /* WKDownloader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D49DE04F801AD33F5D7761DCC6333E8 /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C6D52007FA79EB1467D7AF0CBE2ABE2 /* Person.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F581A7924711715BB54D751EA99CF3A /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = E71F7D51D5AE9271155B9059470D343C /* Dog.m */; };
+		2FE902B0D2D0891B5ADA253C5FF8A72A /* Person.h in Headers */ = {isa = PBXBuildFile; fileRef = B966BF84C547B3EDF613F05879C542CD /* Person.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4799DDC30773AE8BA77132800112C682 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0F8BC2155D5419C5EC4D35DDF030D /* Person.m */; };
 		49BEBCE98DADBED0DF36569E5D0B3C78 /* Pods-WKDownloader_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C732E735A8A19962C64AB997D3897FBF /* Pods-WKDownloader_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8557043DBCDF0167C83B7DED24B4AC26 /* WKDownloader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD6131A9DF378629EDA67991AB406B0E /* WKDownloader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		93A99197839B9A8F4496EC41ED199E47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		9C98C49C5F24A9744A71C98A3B27E2F8 /* Pods-WKDownloader_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53AC6B1D3CAED97794C9566ECE157739 /* Pods-WKDownloader_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AB204A518B819335DA7821F3F8597E9F /* Pods-WKDownloader_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 878AEB51450A6B8B7FBBDAF84145A7D2 /* Pods-WKDownloader_Example-dummy.m */; };
+		ACDC543CBFB33A21E96F1D04A9B50359 /* Dog.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C018C86FC0573523A301B59C4B88742 /* Dog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9CF331C1924224655AF0B8722EB9C63 /* Pods-WKDownloader_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17941E28876A773DE4E676011D935E /* Pods-WKDownloader_Tests-dummy.m */; };
-		D09AA03F44EFC3D9487A6894FDB15037 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D156D137207C25CC815C0944A3D20635 /* Person.m */; };
-		F0D887FD4A9CEC31A97E0AF5777482A7 /* WKDownloader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 310CC39E6EEF029AB9FF846C1DB68190 /* WKDownloader-dummy.m */; };
+		D390A191DBF26136A8CE7ABCFF93C3A4 /* WKDownloader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CED5A48785C7FA05B3B92D2A6270BB /* WKDownloader-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,36 +33,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		008A5CC5360105C9D2238546AF115446 /* WKDownloader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WKDownloader.modulemap; sourceTree = "<group>"; };
 		008EE0D629A0F9DB42554F8890969273 /* Pods-WKDownloader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WKDownloader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2C6D52007FA79EB1467D7AF0CBE2ABE2 /* Person.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Person.h; path = WKDownloader/Classes/Person.h; sourceTree = "<group>"; };
-		310CC39E6EEF029AB9FF846C1DB68190 /* WKDownloader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKDownloader-dummy.m"; sourceTree = "<group>"; };
+		0C018C86FC0573523A301B59C4B88742 /* Dog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		403C1995C39954DCBC36632213DD342D /* Pods-WKDownloader_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WKDownloader_Example-resources.sh"; sourceTree = "<group>"; };
+		4CB0F8BC2155D5419C5EC4D35DDF030D /* Person.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		4E188F0B4443C89867909FE46FE49037 /* Pods-WKDownloader_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WKDownloader_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		528D3DB799293A266F05B3529C287651 /* Pods-WKDownloader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WKDownloader_Example.release.xcconfig"; sourceTree = "<group>"; };
+		52CED5A48785C7FA05B3B92D2A6270BB /* WKDownloader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKDownloader-dummy.m"; sourceTree = "<group>"; };
 		53AC6B1D3CAED97794C9566ECE157739 /* Pods-WKDownloader_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WKDownloader_Tests-umbrella.h"; sourceTree = "<group>"; };
+		571E18CE8E2EF5DCC34759511325D137 /* WKDownloader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WKDownloader.modulemap; sourceTree = "<group>"; };
 		579E73F8EFE3AF66351F1BC7A36763C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D0A964F92E04C4439F37DC5A394B159 /* WKDownloader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WKDownloader.framework; path = WKDownloader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6D4065326D7A425CCA0844CCC7EEBD7B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		724735FC60BBED3831F410FE6CA21E01 /* WKDownloader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WKDownloader.xcconfig; sourceTree = "<group>"; };
 		72D092C0270DC1D0996164740ED94134 /* Pods-WKDownloader_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WKDownloader_Tests-resources.sh"; sourceTree = "<group>"; };
+		7A4C92E8040713D235BD374A13D839EC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		878AEB51450A6B8B7FBBDAF84145A7D2 /* Pods-WKDownloader_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WKDownloader_Example-dummy.m"; sourceTree = "<group>"; };
 		8E89145FDE649DFEE309D2CFF84C1702 /* Pods-WKDownloader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WKDownloader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		91A8C18942857A925AF79DD7BEF5F95C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C5191C1D78FEE998656A61B5F25D9A5 /* Pods-WKDownloader_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WKDownloader_Example.modulemap"; sourceTree = "<group>"; };
 		9CD27E46079615E47DF7FF2EFB527137 /* Pods-WKDownloader_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WKDownloader_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		9EAB4BA8BA336D37A7E7AAA9BB6EF35B /* WKDownloader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKDownloader-prefix.pch"; sourceTree = "<group>"; };
 		A37CA90517620C86E40DBEC5068535AC /* Pods_WKDownloader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WKDownloader_Tests.framework; path = "Pods-WKDownloader_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD6131A9DF378629EDA67991AB406B0E /* WKDownloader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKDownloader-umbrella.h"; sourceTree = "<group>"; };
 		B926CFEFD41D120936DB6CBBEE2F6D54 /* Pods-WKDownloader_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WKDownloader_Example-frameworks.sh"; sourceTree = "<group>"; };
+		B966BF84C547B3EDF613F05879C542CD /* Person.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		BAC596C587DB25A830B9DF715B8A6341 /* Pods-WKDownloader_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WKDownloader_Tests.modulemap"; sourceTree = "<group>"; };
 		BFE90D7A340E72B6826EC452788B9282 /* Pods-WKDownloader_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WKDownloader_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C732E735A8A19962C64AB997D3897FBF /* Pods-WKDownloader_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WKDownloader_Example-umbrella.h"; sourceTree = "<group>"; };
-		D156D137207C25CC815C0944A3D20635 /* Person.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = WKDownloader/Classes/Person.m; sourceTree = "<group>"; };
-		DC9244FC3FE7FE83FA8130B22BAA7B16 /* WKDownloader.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WKDownloader.xcconfig; sourceTree = "<group>"; };
-		DD89FD5418AE698FFF6E3D125BCE35BF /* WKDownloader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKDownloader-umbrella.h"; sourceTree = "<group>"; };
 		DFFAB773BD31135D6AA1526FFA58A43B /* Pods-WKDownloader_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WKDownloader_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E30676A684E82E77FE79291C03147F09 /* WKDownloader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKDownloader-prefix.pch"; sourceTree = "<group>"; };
 		E45905560174801DA6DD5C452FF52703 /* Pods-WKDownloader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WKDownloader_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E71F7D51D5AE9271155B9059470D343C /* Dog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 		EE17941E28876A773DE4E676011D935E /* Pods-WKDownloader_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WKDownloader_Tests-dummy.m"; sourceTree = "<group>"; };
 		F7476B7FFCEB322B8870DB450F0D8E70 /* Pods-WKDownloader_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WKDownloader_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FBAE222FE5903FF9F025F1C76FEA3C8C /* Pods_WKDownloader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WKDownloader_Example.framework; path = "Pods-WKDownloader_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,15 +98,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		01D008909EE3A807DE60E6A9D59E3BA6 /* WKDownloader */ = {
+		157E8915B425BEAA8DBE078F6892D2AB /* WKDownloader */ = {
 			isa = PBXGroup;
 			children = (
-				2C6D52007FA79EB1467D7AF0CBE2ABE2 /* Person.h */,
-				D156D137207C25CC815C0944A3D20635 /* Person.m */,
-				F2BAFA6263C831CA8C28B8A9710C5020 /* Support Files */,
+				9A0F57F9BD9529C3B373B9D25D142173 /* Dog */,
+				187831E49AA63C4F3F54DB0B35FA588A /* Person */,
+				4B5F73E29A7385C0F10CF98EF45D178B /* Support Files */,
 			);
 			name = WKDownloader;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		187831E49AA63C4F3F54DB0B35FA588A /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				B966BF84C547B3EDF613F05879C542CD /* Person.h */,
+				4CB0F8BC2155D5419C5EC4D35DDF030D /* Person.m */,
+			);
+			name = Person;
+			path = WKDownloader/Classes/Person;
 			sourceTree = "<group>";
 		};
 		47A16F383DD4DD70F96EBB430BF6079A /* Pods-WKDownloader_Tests */ = {
@@ -121,6 +135,20 @@
 			);
 			name = "Pods-WKDownloader_Tests";
 			path = "Target Support Files/Pods-WKDownloader_Tests";
+			sourceTree = "<group>";
+		};
+		4B5F73E29A7385C0F10CF98EF45D178B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A4C92E8040713D235BD374A13D839EC /* Info.plist */,
+				571E18CE8E2EF5DCC34759511325D137 /* WKDownloader.modulemap */,
+				724735FC60BBED3831F410FE6CA21E01 /* WKDownloader.xcconfig */,
+				52CED5A48785C7FA05B3B92D2A6270BB /* WKDownloader-dummy.m */,
+				E30676A684E82E77FE79291C03147F09 /* WKDownloader-prefix.pch */,
+				AD6131A9DF378629EDA67991AB406B0E /* WKDownloader-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WKDownloader";
 			sourceTree = "<group>";
 		};
 		4F80A5E1E76D899E0BD8242B97A75712 /* Pods-WKDownloader_Example */ = {
@@ -150,6 +178,16 @@
 				A70528C0635D42FB130963EC45704F78 /* Products */,
 				A4E47F86AF103BE946FCD33F373E9D1F /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		9A0F57F9BD9529C3B373B9D25D142173 /* Dog */ = {
+			isa = PBXGroup;
+			children = (
+				0C018C86FC0573523A301B59C4B88742 /* Dog.h */,
+				E71F7D51D5AE9271155B9059470D343C /* Dog.m */,
+			);
+			name = Dog;
+			path = WKDownloader/Classes/Dog;
 			sourceTree = "<group>";
 		};
 		A4E47F86AF103BE946FCD33F373E9D1F /* Targets Support Files */ = {
@@ -182,7 +220,7 @@
 		CB0DB50C27AD01815A22CCC9F01AD259 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				01D008909EE3A807DE60E6A9D59E3BA6 /* WKDownloader */,
+				157E8915B425BEAA8DBE078F6892D2AB /* WKDownloader */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -195,37 +233,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		F2BAFA6263C831CA8C28B8A9710C5020 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				91A8C18942857A925AF79DD7BEF5F95C /* Info.plist */,
-				008A5CC5360105C9D2238546AF115446 /* WKDownloader.modulemap */,
-				DC9244FC3FE7FE83FA8130B22BAA7B16 /* WKDownloader.xcconfig */,
-				310CC39E6EEF029AB9FF846C1DB68190 /* WKDownloader-dummy.m */,
-				9EAB4BA8BA336D37A7E7AAA9BB6EF35B /* WKDownloader-prefix.pch */,
-				DD89FD5418AE698FFF6E3D125BCE35BF /* WKDownloader-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WKDownloader";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		2660E1FDC58C52E4E3ACDA1C53F16D1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACDC543CBFB33A21E96F1D04A9B50359 /* Dog.h in Headers */,
+				2FE902B0D2D0891B5ADA253C5FF8A72A /* Person.h in Headers */,
+				8557043DBCDF0167C83B7DED24B4AC26 /* WKDownloader-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4E1760B004300ACDBCEC6C7A6A228AEA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9C98C49C5F24A9744A71C98A3B27E2F8 /* Pods-WKDownloader_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		50036AF9BC66CD3719EE3E558C4FA525 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D49DE04F801AD33F5D7761DCC6333E8 /* Person.h in Headers */,
-				28E591242C1C2DCBA2519381C35304C6 /* WKDownloader-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,9 +304,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0037D03FA2646C18B74ECF23726ADBD0 /* Build configuration list for PBXNativeTarget "WKDownloader" */;
 			buildPhases = (
-				DF977ADF18EC7CD9B5DC262118506D03 /* Sources */,
+				790ED4FF1D779435CA8B0C961DEB9E72 /* Sources */,
 				ED5AFF2C7C979AD2203D881750AF37A7 /* Frameworks */,
-				50036AF9BC66CD3719EE3E558C4FA525 /* Headers */,
+				2660E1FDC58C52E4E3ACDA1C53F16D1B /* Headers */,
 			);
 			buildRules = (
 			);
@@ -321,20 +346,21 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		790ED4FF1D779435CA8B0C961DEB9E72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F581A7924711715BB54D751EA99CF3A /* Dog.m in Sources */,
+				4799DDC30773AE8BA77132800112C682 /* Person.m in Sources */,
+				D390A191DBF26136A8CE7ABCFF93C3A4 /* WKDownloader-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4A57D5DBC1332956E4C687EEA99E78E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AB204A518B819335DA7821F3F8597E9F /* Pods-WKDownloader_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DF977ADF18EC7CD9B5DC262118506D03 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D09AA03F44EFC3D9487A6894FDB15037 /* Person.m in Sources */,
-				F0D887FD4A9CEC31A97E0AF5777482A7 /* WKDownloader-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +386,7 @@
 /* Begin XCBuildConfiguration section */
 		4A72D2644DE6FEA3A8238106BCFF55FC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC9244FC3FE7FE83FA8130B22BAA7B16 /* WKDownloader.xcconfig */;
+			baseConfigurationReference = 724735FC60BBED3831F410FE6CA21E01 /* WKDownloader.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -437,7 +463,7 @@
 		};
 		7A7CEDE91E39430C69596E6890A4DAEA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC9244FC3FE7FE83FA8130B22BAA7B16 /* WKDownloader.xcconfig */;
+			baseConfigurationReference = 724735FC60BBED3831F410FE6CA21E01 /* WKDownloader.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

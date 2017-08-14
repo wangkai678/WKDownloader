@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "Dog.h"
 #import "Person.h"
 
 FOUNDATION_EXPORT double WKDownloaderVersionNumber;

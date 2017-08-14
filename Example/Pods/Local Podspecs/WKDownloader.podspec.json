@@ -1,18 +1,18 @@
 {
   "name": "WKDownloader",
   "version": "0.1.0",
-  "summary": "A short description of WKDownloader.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/wangkai_678@163.com/WKDownloader",
+  "summary": "WKDownloader.",
+  "description": "WKDownloader.一个下载工具",
+  "homepage": "https://github.com/wangkai678/WKDownloader",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "wangkai_678@163.com": "kai.wang@srgroup.cn"
+    "wangkai": "wangkai_678@163.com"
   },
   "source": {
-    "git": "https://github.com/wangkai_678@163.com/WKDownloader.git",
+    "git": "https://github.com/wangkai678/WKDownloader.git",
     "tag": "0.1.0"
   },
   "platforms": {
