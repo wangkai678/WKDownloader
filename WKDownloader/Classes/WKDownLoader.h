@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface rr : NSObject
+@interface WKDownLoader : NSObject
+
++ (void)downLoader:(NSURL *)url;
 
 @end
