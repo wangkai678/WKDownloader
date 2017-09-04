@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WKDownloader'
-  s.version          = '0.4.0'
+  s.version          = '0.0.1'
   s.summary          = 'WKDownloader.'
 
 # This description is used to generate tags and improve search results.
@@ -30,16 +30,16 @@ WKDownloader.一个下载工具
 
   s.ios.deployment_target = '8.0'
 
-# s.source_files = 'WKDownloader/Classes/**/*'
+ s.source_files = 'WKDownloader/Classes/**/*'
 
-    s.subspec 'Dog' do |b|
-        b.source_files = 'WKDownloader/Classes/Dog/*'
+#s.subspec 'Dog' do |b|
+#       b.source_files = 'WKDownloader/Classes/Dog/*'
         # b.dependency 'AFNetworking', '~> 2.3'
 
-    end
-    s.subspec 'Person' do |p|
-        p.source_files = 'WKDownloader/Classes/Person/*'
-    end
+#   end
+#   s.subspec 'Person' do |p|
+#       p.source_files = 'WKDownloader/Classes/Person/*'
+#   end
 
   # s.resource_bundles = {
   #   'WKDownloader' => ['WKDownloader/Assets/*.png']
