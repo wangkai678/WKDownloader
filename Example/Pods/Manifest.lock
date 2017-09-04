@@ -1,5 +1,9 @@
 PODS:
-  - WKDownloader (0.1.0)
+  - WKDownloader (0.4.0):
+    - WKDownloader/Dog (= 0.4.0)
+    - WKDownloader/Person (= 0.4.0)
+  - WKDownloader/Dog (0.4.0)
+  - WKDownloader/Person (0.4.0)
 
 DEPENDENCIES:
   - WKDownloader (from `../`)
@@ -9,7 +13,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  WKDownloader: ae24aea3061ffd5d92bb6f937809e81b8a373cf8
+  WKDownloader: e8ed56e1982839256ec654b330bf6df44dd09f82
 
 PODFILE CHECKSUM: 5e5096f4cd91ad74cad08011075c1259d8e8e663
 

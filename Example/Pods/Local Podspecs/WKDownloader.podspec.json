@@ -1,6 +1,6 @@
 {
   "name": "WKDownloader",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "summary": "WKDownloader.",
   "description": "WKDownloader.一个下载工具",
   "homepage": "https://github.com/wangkai678/WKDownloader",
@@ -13,10 +13,19 @@
   },
   "source": {
     "git": "https://github.com/wangkai678/WKDownloader.git",
-    "tag": "0.1.0"
+    "tag": "0.4.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WKDownloader/Classes/**/*"
+  "subspecs": [
+    {
+      "name": "Dog",
+      "source_files": "WKDownloader/Classes/Dog/*"
+    },
+    {
+      "name": "Person",
+      "source_files": "WKDownloader/Classes/Person/*"
+    }
+  ]
 }
