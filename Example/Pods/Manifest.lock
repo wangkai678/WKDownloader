@@ -1,20 +1,16 @@
 PODS:
-  - WKDownloader (0.4.0):
-    - WKDownloader/Dog (= 0.4.0)
-    - WKDownloader/Person (= 0.4.0)
-  - WKDownloader/Dog (0.4.0)
-  - WKDownloader/Person (0.4.0)
+  - WKDownloader (0.0.2)
 
 DEPENDENCIES:
   - WKDownloader (from `../`)
 
 EXTERNAL SOURCES:
   WKDownloader:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  WKDownloader: e8ed56e1982839256ec654b330bf6df44dd09f82
+  WKDownloader: b0ebe93d97bef3741e80316cc73f10ce7b874519
 
 PODFILE CHECKSUM: 5e5096f4cd91ad74cad08011075c1259d8e8e663
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.0.1

@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>WKDownloader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AFCBE550139AD0771E642DFC4AE98197</key>
+		<key>1A4225984A8287A2F2B3EAFCF8150BFB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0816851B49158D91D9710D0DFD012EC</key>
+		<key>BC7742AFA95501809223C4B13624C4EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E01C4C2D12C42A97DB64C8D5903A5FBD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

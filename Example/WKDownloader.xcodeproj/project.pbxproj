@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1A95E2A9CC91C594282C4A42 /* Pods_WKDownloader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKDownloader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CD355D4F73B5457FF287AAB /* WKDownloader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = WKDownloader.podspec; path = ../WKDownloader.podspec; sourceTree = "<group>"; };
+		1CD355D4F73B5457FF287AAB /* WKDownloader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WKDownloader.podspec; path = ../WKDownloader.podspec; sourceTree = "<group>"; };
 		30E90C0326ED2985322A76C2 /* Pods-WKDownloader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKDownloader_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKDownloader_Example/Pods-WKDownloader_Example.release.xcconfig"; sourceTree = "<group>"; };
 		498D8A8C644CAD3A384DEA1C /* Pods_WKDownloader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKDownloader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* WKDownloader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKDownloader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +65,8 @@
 		A01E82BA6ECE2D701F30DF64 /* Pods-WKDownloader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKDownloader_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKDownloader_Tests/Pods-WKDownloader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B98965542392F1DD00185604 /* Pods-WKDownloader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKDownloader_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKDownloader_Example/Pods-WKDownloader_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C40F2698B21DBD3B81EAB26F /* Pods-WKDownloader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKDownloader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKDownloader_Tests/Pods-WKDownloader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D4897293594E3C10725AE0BB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		FFCEC62628DBE5DD59D1229F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D4897293594E3C10725AE0BB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		FFCEC62628DBE5DD59D1229F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,7 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2A41B366FE6FB1AA441994BA /* [CP] Embed Pods Frameworks */ = {
@@ -348,7 +348,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		832F804F9A631CEC7AA1687E /* [CP] Copy Pods Resources */ = {

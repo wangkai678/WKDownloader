@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0816851B49158D91D9710D0DFD012EC"
+               BlueprintIdentifier = "1A4225984A8287A2F2B3EAFCF8150BFB"
                BuildableName = "Pods_WKDownloader_Example.framework"
                BlueprintName = "Pods-WKDownloader_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C0816851B49158D91D9710D0DFD012EC"
+            BlueprintIdentifier = "1A4225984A8287A2F2B3EAFCF8150BFB"
             BuildableName = "Pods_WKDownloader_Example.framework"
             BlueprintName = "Pods-WKDownloader_Example"
             ReferencedContainer = "container:Pods.xcodeproj">
