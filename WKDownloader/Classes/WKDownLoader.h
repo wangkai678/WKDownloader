@@ -10,6 +10,6 @@
 
 @interface WKDownLoader : NSObject
 
-+ (void)downLoader:(NSURL *)url;
+- (void)downLoader:(NSURL *)url;
 
 @end
