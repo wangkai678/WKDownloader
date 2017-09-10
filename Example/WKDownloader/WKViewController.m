@@ -7,8 +7,11 @@
 //
 
 #import "WKViewController.h"
+#import <WKDownloader/WKDownloader.h>
 
 @interface WKViewController ()
+
+@property(nonatomic,strong)WKDownLoader *downLoader;
 
 @end
 
@@ -17,8 +20,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
 }
+
+- (WKDownLoader *)downLoader {
+    if (!_downLoader) {
+        _downLoader = [[WKDownLoader alloc] init];
+    }
+    return _downLoader;
+}
+- (IBAction)download:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"http://free2.macx.cn:8281/tools/photo/SnapNDragPro418.dmg"];
+    [self.downLoader downLoader:url];
+}
+
+- (IBAction)pause:(id)sender {
+    [self.downLoader pauseCurrentTask];
+}
+
+- (IBAction)cancel:(id)sender {
+    [self.downLoader cancelCurrentTask];
+}
+
+- (IBAction)cancelAndClean:(id)sender {
+    [self.downLoader cancelAndClean];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

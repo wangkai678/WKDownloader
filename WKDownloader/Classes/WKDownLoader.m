@@ -21,20 +21,20 @@
 @property (nonatomic, strong)NSURLSession *session;
 @property (nonatomic, copy)NSString *downLoadedPath;
 @property (nonatomic, copy)NSString *downLoadingPath;
-
+@property (nonatomic, strong)NSOutputStream *outputStream;
+@property (nonatomic,weak)NSURLSessionDataTask *dataTask;
 @end
 
 @implementation WKDownLoader
 
-- (NSURLSession *)session {
-    if (!_session) {
-        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
-    }
-    return _session;
-}
-
 - (void)downLoader:(NSURL *)url {
+    //如果任务已经存在则继续下载，否则从头开始下载
+    if ([url isEqual:self.dataTask.originalRequest.URL]) {
+        //任务存在
+        [self resumeCurrentTask];
+        return;
+    }
+    
     //1. 文件的存放
     //下载中 =>temp + 名称
     //MD5 + URL 防止重复资源
@@ -49,6 +49,7 @@
     //return
     if ([WKFileTool fileExists:self.downLoadedPath]) {
         //告诉外界，已经下载完成
+        self.state = WKDownLoadStateSuccess;
         return;
     }
     
@@ -63,6 +64,33 @@
     //获取本地大小
     _tmpSize = [WKFileTool fileSize:self.downLoadingPath];
     [self downLoadwithURL:url offset:_tmpSize];
+}
+
+- (void)pauseCurrentTask {
+    if (self.state == WKDownLoadStateDownLoading) {
+        self.state = WKDownLoadStatePause;
+        [self.dataTask suspend];
+    }
+}
+
+//继续下载
+- (void)resumeCurrentTask {
+    if (self.dataTask && self.state == WKDownLoadStatePause) {
+        [self.dataTask resume];
+        self.state = WKDownLoadStateDownLoading;
+    }
+}
+
+- (void)cancelCurrentTask {
+    self.state = WKDownLoadStatePause;
+    [self.session invalidateAndCancel];
+    self.session = nil;
+}
+
+- (void)cancelAndClean {
+    [self cancelCurrentTask];
+    //删除缓存
+    [WKFileTool removeFile:self.downLoadingPath];
 }
 
 #pragma mak - 协议方法
@@ -85,6 +113,7 @@
         [WKFileTool moveFile:self.downLoadingPath toPath:self.downLoadedPath];
         //取消本次请求
         completionHandler(NSURLSessionResponseCancel);
+        self.state = WKDownLoadStateSuccess;
         return;
     }
     
@@ -99,19 +128,38 @@
         return;
     }
     
+    self.state = WKDownLoadStateDownLoading;
     //继续接受数据
+    self.outputStream = [NSOutputStream outputStreamToFileAtPath:self.downLoadingPath append:YES];
+    [self.outputStream open];
     completionHandler(NSURLSessionResponseAllow);
     
 }
 
 //当用户确定，继续接受数据的时候调用
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
-    
+    [self.outputStream write:data.bytes maxLength:data.length];
 }
 
 //请求完成的时候调用（!＝请求成功／失败）
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-    
+    if (error == nil) {
+        //不一定是成功，
+        //数据肯定可以请求完毕
+        //判断，本地缓存是否等于总大小(filename:filesize:md5:xxx)
+        //如果等于则验证文件是否完整（file md5）
+        [WKFileTool moveFile:self.downLoadingPath toPath:self.downLoadedPath];
+        self.state = WKDownLoadStateSuccess;
+    }else{
+        //有问题
+        //取消 断网
+        if (error.code == -999) {
+            self.state = WKDownLoadStatePause;
+        }else{
+            self.state = WKDownLoadStateFailed;
+        }
+    }
+    [self.outputStream close];
 }
 
 #pragma mark - 私有方法
@@ -124,8 +172,24 @@
 - (void)downLoadwithURL:(NSURL *)url offset:(long long)offset {
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:0];
    [request setValue:[NSString stringWithFormat:@"bytes=%lld-",offset] forHTTPHeaderField:@"Range"];
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request];
-    [dataTask resume];
+    self.dataTask = [self.session dataTaskWithRequest:request];
+    [self resumeCurrentTask];
+}
+
+#pragma mark - 懒加载
+- (NSURLSession *)session {
+    if (!_session) {
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    }
+    return _session;
+}
+
+- (void)setState:(WKDownLoadState)state{
+    if (_state == state) {
+        return;
+    }
+    _state = state;
 }
 
 @end
