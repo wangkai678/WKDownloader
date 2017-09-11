@@ -7,7 +7,7 @@
 //
 
 #import "WKViewController.h"
-#import <WKDownloader/WKDownloader.h>
+#import "WKDownLoader.h"
 
 @interface WKViewController ()
 
@@ -30,8 +30,20 @@
     return _downLoader;
 }
 - (IBAction)download:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"http://free2.macx.cn:8281/tools/photo/SnapNDragPro418.dmg"];
-    [self.downLoader downLoader:url];
+    NSURL *url = [NSURL URLWithString:@"http://m5.pc6.com/xuh5/Keka1011.dmg"];
+//    [self.downLoader downLoader:url];
+    [self.downLoader downLoader:url downLoadInfo:^(long long totalSize) {
+        NSLog(@"下载信息--%lld",totalSize);
+    } progress:^(float progress) {
+         NSLog(@"下载进度--%f",progress);
+    } success:^(NSString *filePath) {
+         NSLog(@"下载完成路径--%@",filePath);
+    } failed:^{
+         NSLog(@"下载失败");
+    }];
+    [self.downLoader setStateChange:^(WKDownLoadState state){
+        NSLog(@"%lu",(unsigned long)state);
+    }];
 }
 
 - (IBAction)pause:(id)sender {

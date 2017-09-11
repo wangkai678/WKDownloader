@@ -27,13 +27,26 @@
 
 @implementation WKDownLoader
 
+- (void)downLoader:(NSURL *)url downLoadInfo:(DownLoadInfoType)downLoadInfo progress:(ProgressBlockType)progressBlock success:(SuccessBlockType)successBlock failed:(FailedBlockType)failedBlock {
+    self.downLoadInfo = downLoadInfo;
+    self.progressChange = progressBlock;
+    self.successBlock = successBlock;
+    self.faildBlock = failedBlock;
+    [self downLoader:url];
+}
+
 - (void)downLoader:(NSURL *)url {
     //如果任务已经存在则继续下载，否则从头开始下载
     if ([url isEqual:self.dataTask.originalRequest.URL]) {
-        //任务存在
-        [self resumeCurrentTask];
-        return;
+        if(self.state == WKDownLoadStatePause){
+            //任务存在
+            [self resumeCurrentTask];
+            return;
+        }
     }
+    
+    //能到这里两种情况：1.任务不存在。2.任务存在但是任务的url地址不同
+    [self cancelCurrentTask];
     
     //1. 文件的存放
     //下载中 =>temp + 名称
@@ -107,6 +120,10 @@
         _totalSize = [[contentRangeStr componentsSeparatedByString:@"/"].lastObject longLongValue];
     }
     
+    if (self.downLoadInfo) {
+        self.downLoadInfo(_totalSize);
+    }
+    
     //如果本地大小和总大小相等，则移动到下载完成文件夹，然后取消本次请求
     if (_tmpSize == _totalSize) {
         //移动到下载完成文件夹
@@ -138,6 +155,8 @@
 
 //当用户确定，继续接受数据的时候调用
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
+    _tmpSize += data.length;
+    self.progress = 1.0 * _tmpSize / _totalSize;
     [self.outputStream write:data.bytes maxLength:data.length];
 }
 
@@ -190,6 +209,22 @@
         return;
     }
     _state = state;
+    if (self.stateChange) {
+        self.stateChange(_state);
+    }
+    if (_state == WKDownLoadStateSuccess && self.successBlock) {
+        self.successBlock(self.downLoadedPath);
+    }
+    if (_state == WKDownLoadStateFailed && self.faildBlock) {
+        self.faildBlock();
+    }
+}
+
+- (void)setProgress:(float)progress {
+    _progress = progress;
+    if (self.progressChange) {
+        self.progressChange(_progress);
+    }
 }
 
 @end

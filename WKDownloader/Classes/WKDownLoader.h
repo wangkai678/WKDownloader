@@ -15,8 +15,15 @@ typedef NS_ENUM(NSUInteger, WKDownLoadState) {
     WKDownLoadStateFailed
 };
 
+typedef void(^DownLoadInfoType)(long long totalSize);
+typedef void(^ProgressBlockType)(float progress);
+typedef void(^SuccessBlockType)(NSString *filePath);
+typedef void(^FailedBlockType)();
+typedef void(^StateChangeType)(WKDownLoadState state);
 
 @interface WKDownLoader : NSObject
+
+- (void)downLoader:(NSURL *)url downLoadInfo:(DownLoadInfoType)downLoadInfo progress:(ProgressBlockType)progressBlock success:(SuccessBlockType)successBlock failed:(FailedBlockType)failedBlock;
 
 /**
  根据URL地址下载资源，如果任务已经存在，则继续下载
@@ -43,6 +50,26 @@ typedef NS_ENUM(NSUInteger, WKDownLoadState) {
  */
 - (void)cancelAndClean;
 
-@property (nonatomic,assign) WKDownLoadState state;
+
+/**
+ 继续下载
+ */
+- (void)resumeCurrentTask;
+
+@property (nonatomic ,assign,readonly) float progress;
+@property (nonatomic,assign,readonly) WKDownLoadState state;
+
+
+@property (nonatomic, copy) DownLoadInfoType downLoadInfo;
+
+@property (nonatomic, copy) StateChangeType stateChange;
+
+@property (nonatomic, copy) ProgressBlockType progressChange;
+
+@property (nonatomic, copy) SuccessBlockType successBlock;
+
+@property (nonatomic, copy) FailedBlockType faildBlock;
+
+
 
 @end
