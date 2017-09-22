@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "NSString+WK.h"
 #import "WKDownLoader.h"
+#import "WKDownLoaderManager.h"
 #import "WKFileTool.h"
 
 FOUNDATION_EXPORT double WKDownloaderVersionNumber;

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "WKDownloader.h"
+#import "WKDownLoader.h"
 
 @interface WKDownLoaderManager : NSObject
 
